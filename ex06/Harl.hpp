@@ -2,7 +2,6 @@
 #define HARL_HPP
 
 #include <string>
-#include <system_error>
 
 class Harl
 {
@@ -13,13 +12,7 @@ class Harl
         void error();
 
         typedef void (Harl::*Action)();
-        enum level
-        {
-            DEBUG,
-            INFO,
-            WARNING,
-            ERROR
-        };
+        static const char* const levels[4];
         static const Action actions[4];
     public:
         void complain(std::string level);
