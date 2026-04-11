@@ -61,6 +61,6 @@ void Harl::complain(std::string level)
         (this->*actions[3])();
         break;
     default:
-        std::cout << "[ INVALID LEVEL ]" << std::endl;
+        std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
     }
 }
